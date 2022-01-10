@@ -2,7 +2,6 @@
 
 module SimpleDataMigrations
   class Railtie < ::Rails::Railtie
-
     rake_tasks do
       load File.expand_path("../tasks/data.rake", __dir__)
     end
