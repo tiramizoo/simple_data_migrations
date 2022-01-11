@@ -1,3 +1,7 @@
+## [0.2.2] - 2022-01-11
+
+- Fixed migration salt value
+
 ## [0.2.1] - 2022-01-11
 
 - Fixed printing duplicates in status command
