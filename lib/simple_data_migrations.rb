@@ -13,7 +13,7 @@ module SimpleDataMigrations
   def self.status
     ran_versions = Utils.ran_versions
     files = Utils.script_files
-    all_versions = (ran_versions | files).map { |filename| Utils.version(filename) }
+    all_versions = ran_versions | files.map { |filename| Utils.version(filename) }
 
     result = all_versions.sort.map do |version|
       filename = files.find { |file| file.start_with?(version) }
