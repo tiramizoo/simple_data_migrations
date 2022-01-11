@@ -7,7 +7,7 @@ module SimpleDataMigrations
   class InstallGenerator < Rails::Generators::Base
     include ActiveRecord::Generators::Migration
 
-    source_paths << File.expand_path("../templates", __FILE__)
+    source_paths << File.expand_path("templates", __dir__)
 
     def create_migration_file
       migration_template "install.rb.erb", "db/migrate/create_simple_data_migrations_table.rb"

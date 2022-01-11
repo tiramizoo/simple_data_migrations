@@ -4,6 +4,7 @@ require "benchmark"
 require "thor/shell/basic"
 
 require_relative "simple_data_migrations/version"
+require_relative "simple_data_migrations/concurrent_run"
 require_relative "simple_data_migrations/entry"
 require_relative "simple_data_migrations/utils"
 require_relative "simple_data_migrations/railtie" if defined?(Rails::Railtie)
@@ -42,6 +43,10 @@ module SimpleDataMigrations
       measure = "%.4fs" % time.real
       Thor::Shell::Basic.new.say("Finished in #{measure}")
     end
+  end
+
+  def self.run_with_lock
+    ConcurrentRun.with_advisory_lock { run }
   end
 
   def self.bootstrap

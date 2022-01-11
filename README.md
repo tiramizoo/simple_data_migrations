@@ -21,6 +21,12 @@ Generate sample data migration file by `bin/rails generate simple_data_migration
 Status can be displayed by `bin/rails data:migrate:status`
 And executed by `bin/rails data:migrate`
 
+### Locked Migrations
+
+To ensure that migration script is run only once during deploy to multiple machines, one can use `bin/rails data:migrate_with_lock` task.
+It will use database advisory lock, in similar manner to how the Rails database migrations are run.
+In case of multiple concurrent task invocations, the first run will succeed but the others will raise `SimpleDataMigrations::ConcurrentRun::Error`.
+
 ## Development
 
 TODO: add configuration
