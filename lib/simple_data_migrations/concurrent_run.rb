@@ -4,7 +4,7 @@ module SimpleDataMigrations
   module ConcurrentRun
     class Error < StandardError; end
 
-    MIGRATOR_SALT = 3053462845
+    MIGRATOR_SALT = 1053462845
     private_constant :MIGRATOR_SALT
 
     def self.with_advisory_lock
