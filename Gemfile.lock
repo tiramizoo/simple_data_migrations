@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    simple_data_migrations (0.2.2)
+      activerecord (>= 6.0)
+      thor (>= 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (7.0.4)
+      activesupport (= 7.0.4)
+    activerecord (7.0.4)
+      activemodel (= 7.0.4)
+      activesupport (= 7.0.4)
+    activesupport (7.0.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    concurrent-ruby (1.1.10)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.16.3)
+    rake (13.0.6)
+    thor (1.2.1)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  minitest (>= 5.0)
+  rake (>= 13.0)
+  simple_data_migrations!
+
+BUNDLED WITH
+   2.3.22

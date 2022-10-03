@@ -16,7 +16,7 @@ Install by creating db migration file:
 
 `bin/rails generate simple_data_migrations:install` and then run `bin/rails db:migrate`
 
-Generate sample data migration file by `bin/rails generate simple_data_migrations:template`
+Generate sample data migration file by `bin/rails generate simple_data_migrations:template migration-name`
 
 Status can be displayed by `bin/rails data:migrate:status`
 And executed by `bin/rails data:migrate`
@@ -29,7 +29,9 @@ In case of multiple concurrent task invocations, the first run will succeed but 
 
 ## Development
 
-TODO: add configuration
+TODO:
+  * add configuration
+  * add tests
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
