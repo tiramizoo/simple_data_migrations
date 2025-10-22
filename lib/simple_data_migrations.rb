@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "benchmark"
 require "thor/shell/basic"
 
 require_relative "simple_data_migrations/version"
@@ -37,10 +36,12 @@ module SimpleDataMigrations
 
     non_run_scripts.each do |filename|
       Thor::Shell::Basic.new.say("Running data migration: #{filename}")
-      time = Benchmark.measure do
-        load Utils.root.join(filename)
-      end
-      measure = "%.4fs" % time.real
+
+      started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+      load Utils.root.join(filename)
+      duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
+
+      measure = "%.4fs" % duration
       Thor::Shell::Basic.new.say("Finished in #{measure}")
     end
   end
