@@ -1,3 +1,7 @@
+## [0.3.0] - 2025-10-22
+
+- Removed benchmark gem dependency
+
 ## [0.2.2] - 2022-01-11
 
 - Fixed migration salt value

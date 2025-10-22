@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_data_migrations (0.2.2)
+    simple_data_migrations (0.3.0)
       activerecord (>= 6.0)
       thor (>= 1.0)
 

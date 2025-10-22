@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "simple_data_migrations"
   spec.version = SimpleDataMigrations::VERSION
   spec.authors = ["Wojciech Wnętrzak"]
-  spec.email = ["w.wnetrzak@gmail.com"]
+  spec.email = ["wojtek@wnetrzak.pl"]
 
   spec.summary = "Data migrations"
   spec.description = "Data migrations (mainly for Rails)"
